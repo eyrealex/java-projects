@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/fibonacci/fibonacci.iml" filepath="$PROJECT_DIR$/fibonacci/fibonacci.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-projects.iml" filepath="$PROJECT_DIR$/java-projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selection-sort/selection-sort.iml" filepath="$PROJECT_DIR$/selection-sort/selection-sort.iml" />
     </modules>
   </component>
 </project>
