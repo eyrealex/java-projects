@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/algorithms/searchAlgorithms/binarySearch/binarySearch.iml" filepath="$PROJECT_DIR$/algorithms/searchAlgorithms/binarySearch/binarySearch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_projects.iml" filepath="$PROJECT_DIR$/java_projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/searching/binarySearch/binarySearch.iml" filepath="$PROJECT_DIR$/algorithms/searching/binarySearch/binarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaProjects.iml" filepath="$PROJECT_DIR$/javaProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/codingExercises/codeTutorials/optionals/optionals.iml" filepath="$PROJECT_DIR$/codingExercises/codeTutorials/optionals/optionals.iml" />
       <module fileurl="file://$PROJECT_DIR$/codingExercises/codeTutorials/restApiTutorial/restApiTutorial.iml" filepath="$PROJECT_DIR$/codingExercises/codeTutorials/restApiTutorial/restApiTutorial.iml" />
-      <module fileurl="file://$PROJECT_DIR$/algorithms/sortingAlgorithms/selectionSort/selectionSort.iml" filepath="$PROJECT_DIR$/algorithms/sortingAlgorithms/selectionSort/selectionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/sorting/selectionSort/selectionSort.iml" filepath="$PROJECT_DIR$/algorithms/sorting/selectionSort/selectionSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/testingExercises/unitTestExercise/unitTestExercise.iml" filepath="$PROJECT_DIR$/testingExercises/unitTestExercise/unitTestExercise.iml" />
     </modules>
   </component>
