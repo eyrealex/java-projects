@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/algorithms/search-algorithms/binary-search/binary-search.iml" filepath="$PROJECT_DIR$/algorithms/search-algorithms/binary-search/binary-search.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-projects.iml" filepath="$PROJECT_DIR$/java-projects.iml" />
-      <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/optionals/optionals.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/optionals/optionals.iml" />
-      <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/rest-api-tutorial/rest-api-tutorial.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/rest-api-tutorial/rest-api-tutorial.iml" />
-      <module fileurl="file://$PROJECT_DIR$/algorithms/sorting-algorithms/selection-sort/selection-sort.iml" filepath="$PROJECT_DIR$/algorithms/sorting-algorithms/selection-sort/selection-sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/searchAlgorithms/binary-search/binarySearch.iml" filepath="$PROJECT_DIR$/algorithms/searchAlgorithms/binary-search/binarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_projects.iml" filepath="$PROJECT_DIR$/java_projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codingExercises/codeTutorials/optionals/optionals.iml" filepath="$PROJECT_DIR$/codingExercises/codeTutorials/optionals/optionals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codingExercises/codeTutorials/rest-api-tutorial/rest_api_tutorial.iml" filepath="$PROJECT_DIR$/codingExercises/codeTutorials/rest-api-tutorial/rest_api_tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/sortingAlgorithms/selection-sort/selectionSort.iml" filepath="$PROJECT_DIR$/algorithms/sortingAlgorithms/selection-sort/selectionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testingExercises/unit-test-exercise/unit-test-exercise.iml" filepath="$PROJECT_DIR$/testingExercises/unit-test-exercise/unit-test-exercise.iml" />
     </modules>
   </component>
 </project>
