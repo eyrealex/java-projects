@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/algorithms/searching/binarySearch/binarySearch.iml" filepath="$PROJECT_DIR$/algorithms/searching/binarySearch/binarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/debugging/debugging.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/debugging/debugging.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaProjects.iml" filepath="$PROJECT_DIR$/javaProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/optionals/optionals.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/optionals/optionals.iml" />
       <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/restApiTutorial/restApiTutorial.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/restApiTutorial/restApiTutorial.iml" />
