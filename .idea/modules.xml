@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/algorithms/recursion/fibonacci/fibonacci.iml" filepath="$PROJECT_DIR$/algorithms/recursion/fibonacci/fibonacci.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaProjects.iml" filepath="$PROJECT_DIR$/javaProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/optionals/optionals.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/optionals/optionals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/sorting/quickSort/quickSort.iml" filepath="$PROJECT_DIR$/algorithms/sorting/quickSort/quickSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/coding-exercises/code-tutorials/restApiTutorial/restApiTutorial.iml" filepath="$PROJECT_DIR$/coding-exercises/code-tutorials/restApiTutorial/restApiTutorial.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithms/sorting/selectionSort/selectionSort.iml" filepath="$PROJECT_DIR$/algorithms/sorting/selectionSort/selectionSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/testing-exercises/unitTestExercise/unitTestExercise.iml" filepath="$PROJECT_DIR$/testing-exercises/unitTestExercise/unitTestExercise.iml" />
