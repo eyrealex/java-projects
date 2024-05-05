@@ -1,14 +1,17 @@
-public class Main {
+public class Fibonacci {
 
     private static long [] fibonacciCache;
-    public static void main(String[] args) {
+    public static void FindFibonacci(String[] args) {
 
-        int n =50; // n represents the indexed number: n = the 14th position in the fibonacci series
+        int n = 92; // n represents the indexed number: n = the 14th position in the fibonacci series
 
         // create a variable used to store the solution of a fibonacci to help with memoization, speeds up the fibonacci calculation
         fibonacciCache = new long[n + 1]; //we use n + 1 because the index we want takes n + 1 to reach
 
-        System.out.println(fibonacci(n));
+        for(int i = 0; i <= n; i++){
+            System.out.println(fibonacci(i));
+        }
+
     }
 
     private static long fibonacci(int n) {
