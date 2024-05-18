@@ -6,10 +6,10 @@ public class MergeSort {
     public static void main(String[] args) {
 
         Random random = new Random();
-        int[] array = new int[1000];
+        int[] array = new int[7];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(100000);
+            array[i] = random.nextInt(10);
         }
 
         System.out.println("\nPrinting array before sorted: ");
@@ -30,9 +30,9 @@ public class MergeSort {
             return;
         }
 
-        int splitArray = array.length / 2; //split original array in half
-        int[] leftHalf = new int[splitArray]; //create the left half of the split
-        int[] rightHalf = new int[array.length - splitArray]; //create right half of split but instead take original array and subtract the split value to deal with odd numbers
+        int splitArray = array.length / 2; //split original array in half, in uneven array left half has the lesser values
+        int[] leftHalf = new int[splitArray]; //create the using this split away
+        int[] rightHalf = new int[array.length - splitArray]; //right away is the length of the array - the split to get remaining values
 
 
         //since left half is a new int array, we need to fill the left half array with the actual values on the left of the split
@@ -42,7 +42,7 @@ public class MergeSort {
 
         //do the same for the right
         for (int i = splitArray; i < array.length; i++) {
-            rightHalf[i - splitArray] = array[i];
+            rightHalf[i - splitArray] = array[i]; //get 1st index of right array and set it to value of original array at that index
         }
 
         //call recursion to keep splitting both halves of the array until they reach an element size of 1
@@ -63,28 +63,28 @@ public class MergeSort {
         //need 3 iterators to merge, i iterates left half, j iterates right half, k iterates merged array
         int i = 0, j = 0, k = 0;
 
-        //loop until no more elements in both halves of the array.
+        //loop until we run out of elements in the left or right array.
         while (i < leftSize && j < rightSize) {
-            if (leftHalf[i] <= rightHalf[j]) { //compare i element on left with j element on right
-                array[k] = leftHalf[i]; // add this element to the merged array
-                i++; //move to next element for next round of comparison
+            if (leftHalf[i] <= rightHalf[j]) { //compare ith element on left with jth element on right to find smaller element, if both equal left half gets added
+                array[k] = leftHalf[i]; // add this element to the merged array at k since it is the smaller value
+                i++; //iterate i to check the next value in left array
             } else {
-                array[k] = rightHalf[j]; // otherwise add right side element to merged array
-                j++; //move to next element for next round of comparison
+                array[k] = rightHalf[j]; // otherwise add right side element to merged array since it is the smaller element
+                j++; //iterate j to check the next value in right array
             }
-            k++; //we also need to move to next position of merged array to avoid duplicating the elements from left and right halves
+            k++; //also iterate merged array at k to allow for values from left and right to be added and not override the same index
         }
 
         //account for any elements left in left array
-        while (i < leftSize) {
-            array[k] = leftHalf[i];
+        while (i < leftSize) { //if no more elements in left size array, by pass this otherwise
+            array[k] = leftHalf[i]; // add the remaining elements to the merged array at k
             i++;
             k++;
         }
 
         //account for any elements left in right array
-        while (j < rightSize) {
-            array[k] = rightHalf[j];
+        while (j < rightSize) { //if no more elements in right size array, by pass this otherwise
+            array[k] = rightHalf[j]; // add the remaining elements to the merged array at k
             j++;
             k++;
         }
