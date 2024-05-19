@@ -43,7 +43,7 @@ public class SelectionSort {
                 }
             }
 
-            swap(numbers, i, indexOfNum); //pass the array, i and index of i into a swap method, so we can swap the values at index i with the values at index j
+            swap(numbers, i, indexOfNum); //pass the array, i and index of j  into a swap method, so we can swap the values at index i with the values at index j
         }
 
     }

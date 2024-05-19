@@ -10,7 +10,7 @@ public class MergeSort {
         Left half [7],  [4, 1] and Right half [9, 8], [3, 9]
         Left half [7], [4], [1] and Right half [9], [8], [3], [9]
         Now we want to begin the merge sort by merging the smallest sub arrays first
-        Left half [1, 4] then [1, 4, 7], Right half [8, 9] then [3, 9], then [3, 9] [8, 9], then [3, 8, 9, 9]
+        Left half [1, 4] then [1, 4, 7], Right half [8, 9] then [3, 9], then [3, 8] [9, 9], then [3, 8, 9, 9]
         Left half [1, 4, 7], Right half [3, 8, 9, 9]
         Compare the numbers on left with right, 1->3, 4->3, 4->8, 7->8, 8, 9->9, 9
         Merge sort complete [1, 3, 4, 7, 8, 9, 9]
@@ -44,8 +44,8 @@ public class MergeSort {
         }
 
         int splitArray = array.length / 2; //split original array in half, in uneven array left half has the lesser values
-        int[] leftHalf = new int[splitArray]; //create the using this split away
-        int[] rightHalf = new int[array.length - splitArray]; //right away is the length of the array - the split to get remaining values
+        int[] leftHalf = new int[splitArray]; // left half of array is made using the number of elements in the split array but empty values
+        int[] rightHalf = new int[array.length - splitArray]; //right array is the length of the array - the split to get remaining values
 
 
         //since left half is a new int array, we need to fill the left half array with the actual values on the left of the split
@@ -88,14 +88,14 @@ public class MergeSort {
             k++; //also iterate merged array at k to allow for values from left and right to be added and not override the same index
         }
 
-        //account for any elements left in left array
+        //remaining elements in left side, they are added to merged k in order found which is sorted
         while (i < leftSize) { //if no more elements in left size array, by pass this otherwise
             array[k] = leftHalf[i]; // add the remaining elements to the merged array at k
             i++;
             k++;
         }
 
-        //account for any elements left in right array
+        //remaining elements in right side, they are added to merged k in order found which is sorted
         while (j < rightSize) { //if no more elements in right size array, by pass this otherwise
             array[k] = rightHalf[j]; // add the remaining elements to the merged array at k
             j++;

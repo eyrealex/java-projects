@@ -8,10 +8,8 @@ public class BinarySearch {
     }
 
     private static int binarySearch(int[] numbers, int numToFind) {
-        int low = 0;
-        int high = numbers.length - 1; // get the last index position of the array and set it to high
-
-        //System.out.println("this is low " + low + "This is high " + high);
+        int low = 0; //start at the first position in the array
+        int high = numbers.length - 1; // start at the last position in the array by index
 
         while (low <= high) { //continue looping while low is less or equal to high
             int middlePosition = (low + high) / 2; //this is index of middle position, value 6 has the index of 3
@@ -26,6 +24,6 @@ public class BinarySearch {
                 low = middlePosition + 1; // move value of low to right of middle position. We do this because we now disregard all other elements at <= middle position ( low will be set to index 4 if we are looking for value at index 9 )
             }
         }
-        return -1;
+        return      -1;
     }
 }
