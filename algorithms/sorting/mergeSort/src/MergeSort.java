@@ -2,6 +2,19 @@ import java.util.Random;
 
 public class MergeSort {
 
+    /*
+        MERGE SORT solution
+        Take Array {7, 4, 1, 9, 8, 3, 9}, consists of 7 numbers
+        Recursively Split array into two halves, until we end up with single elements
+        Left half [7, 4, 1] and Right half [9, 8, 3, 9]
+        Left half [7],  [4, 1] and Right half [9, 8], [3, 9]
+        Left half [7], [4], [1] and Right half [9], [8], [3], [9]
+        Now we want to begin the merge sort by merging the smallest sub arrays first
+        Left half [1, 4] then [1, 4, 7], Right half [8, 9] then [3, 9], then [3, 9] [8, 9], then [3, 8, 9, 9]
+        Left half [1, 4, 7], Right half [3, 8, 9, 9]
+        Compare the numbers on left with right, 1->3, 4->3, 4->8, 7->8, 8, 9->9, 9
+        Merge sort complete [1, 3, 4, 7, 8, 9, 9]
+    */
 
     public static void main(String[] args) {
 
