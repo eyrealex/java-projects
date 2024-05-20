@@ -24,6 +24,6 @@ public class BinarySearch {
                 low = middlePosition + 1; // move value of low to right of middle position. We do this because we now disregard all other elements at <= middle position ( low will be set to index 4 if we are looking for value at index 9 )
             }
         }
-        return      -1;
+        return -1;
     }
 }

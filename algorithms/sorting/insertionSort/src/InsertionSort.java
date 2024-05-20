@@ -1,6 +1,19 @@
 import java.util.Random;
 
 public class InsertionSort {
+
+    /*
+        INSERTION SORT solution
+        Take Array {5, 4, 3, 2, 6}, consists of 5 numbers
+        Make a temp variable for the second index value in array
+        Compare it with the value at the first index
+        If the first index is larger than second we move first index into the position that the second was at
+        Then we want to return to position before first index in order to add the temp variable
+        Iterate and repeat
+        When while loop conditions have not been met, loop continues creating temps and moving them to beginning of array
+        When while loop condition is met, all values have been inserted correctly
+
+    */
     public static void main(String[] args) {
 
         Random random = new Random();
