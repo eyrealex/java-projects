@@ -1,6 +1,24 @@
 import java.util.Random;
 
 public class QuickSort {
+
+    /*
+        QUICK SORT solution
+            We have an array = {1, 8, 3, 9, 4, 5, 7}
+            Choose one number by random in the array as the pivot
+            Swap this pivot with last number in array
+
+            Partition Steps
+            Move all numbers less than pivot to left of pivot but unordered
+            Move all numbers greater than pivot to right of pivot but unordered
+            Pivot is now in correct position in array
+
+            Recursively quicksort all values left of pivot until all values on the left are in order
+            Recursively quicksort all values right of pivot until all values on the right are in order
+            This is done by repeating the above, choosing a pivot and partitioning
+
+    */
+
     public static void main(String[] args) {
 
         Random random = new Random();
@@ -21,14 +39,14 @@ public class QuickSort {
 
     }
 
-    //method overloading is used to allow us to clean up method call above
-    private static void quickSort(int[] array){
+    private static void quickSort(int[] array) {
         quickSort(array, 0, array.length - 1);
     }
+
     //quick sort method takes in the array of numbers, the low index which are the numbers < pivot, and high index which are the numbers > pivot
     private static void quickSort(int[] array, int lowIndex, int highIndex) {
 
-        if (lowIndex >= highIndex) { //this if stops the recursion from failing the program
+        if (lowIndex >= highIndex) { //baseline to break recursion if condition is met
             return;
         }
 
@@ -36,9 +54,9 @@ public class QuickSort {
          * Random pivot is used as it is more efficient that choosing last index in array
          * Code works same as choosing last index in array, but swap random index with last index in array*/
 
-        int pivotIndex = new Random().nextInt(highIndex - lowIndex) + lowIndex; //choose random pivot index between the lowest and highest
-        int pivot = array[pivotIndex]; // use the value of the array at the pivot index
-        swap(array, pivotIndex, highIndex); //swap the pivot index with the highest index in array
+        int pivotIndex = new Random().nextInt(highIndex - lowIndex) + lowIndex; //set pivot index as random value between low & high
+        int pivot = array[pivotIndex]; // set pivot to the value of the array where pivot index is found
+        swap(array, pivotIndex, highIndex); //swap index of pivot with index of high
 
         /*STEP 2: PARTITIONING CODE*/
 
@@ -57,17 +75,17 @@ public class QuickSort {
         int higherThanPivot = highIndex; //create a value for index higher than pivot
 
         while (lowerThanPivot < higherThanPivot) { //while low index is less than high index
-            while (array[lowerThanPivot] <= pivot && lowerThanPivot < higherThanPivot) { //while low index value in array is less than pivot and low index is less than high index
-                lowerThanPivot++; //increment the low index to continue checking - make lower = higher to find last number to sort
+            while (array[lowerThanPivot] <= pivot && lowerThanPivot < higherThanPivot) { //walk from left until we find a number greater than pivot or until lower pointer is greater than higher pointer
+                lowerThanPivot++; //increment the lower pointer until value at this array is greater than pivot or pass right pointer
             }
-            while (array[higherThanPivot] >= pivot && lowerThanPivot < higherThanPivot) { //while high index value in array is greater than pivot and lower index is less than high index
-                higherThanPivot--; //decrement the higher index to continue checking - make higher = lower to find last number to sort
+            while (array[higherThanPivot] >= pivot && lowerThanPivot < higherThanPivot) { //walk from right until we find a number less than pivot or until higher pointer is less than lower pointer
+                higherThanPivot--; //decrement the higher pointer until value at this array is less than pivot or pass left pointer
             }
 
-            swap(array, lowerThanPivot, higherThanPivot); //call swap method and pass in the array, lower and higher index after lower is > pivot and higher is < pivot
+            swap(array, lowerThanPivot, higherThanPivot); // when lower and higher pointers meet we swap the indexes of lower and higher
         }
 
-        swap(array, lowerThanPivot, highIndex); //once lower and higher meet, swap pivot with lower
+        swap(array, lowerThanPivot, highIndex); // then we can swap the index for lower pointer with index of pivot
         return lowerThanPivot;
     }
 
