@@ -60,17 +60,17 @@ public class QuickSort {
 
         /*STEP 2: PARTITIONING CODE*/
 
-        int lowerThanPivot = partition(array, lowIndex, highIndex, pivot);
+        int partition = partitionPivot(array, lowIndex, highIndex, pivot);
 
         /*STEP 3: RECURSION CODE*/
 
         //sort left of pivot
-        quickSort(array, lowIndex, lowerThanPivot - 1); //sort left of pivot by passing in the lowest value left of pivot and the pivot - 1
-        quickSort(array, lowerThanPivot + 1, highIndex); //sort right of pivot by passing the pivot + 1 and highest value left of pivot
+        quickSort(array, lowIndex, partition - 1); //sort left of pivot by passing in the lowest value left of pivot and the pivot - 1
+        quickSort(array, partition + 1, highIndex); //sort right of pivot by passing the pivot + 1 and highest value left of pivot
 
     }
 
-    private static int partition(int[] array, int lowIndex, int highIndex, int pivot) {
+    private static int partitionPivot(int[] array, int lowIndex, int highIndex, int pivot) {
         int lowerThanPivot = lowIndex; //create a value for index lower than pivot
         int higherThanPivot = highIndex; //create a value for index higher than pivot
 
@@ -82,10 +82,10 @@ public class QuickSort {
                 higherThanPivot--; //decrement the higher pointer until value at this array is less than pivot or pass left pointer
             }
 
-            swap(array, lowerThanPivot, higherThanPivot); // when lower and higher pointers meet we swap the indexes of lower and higher
+            swap(array, lowerThanPivot, higherThanPivot); // when lower and higher pointers meet we swap lower pointer with higher pointer
         }
 
-        swap(array, lowerThanPivot, highIndex); // then we can swap the index for lower pointer with index of pivot
+        swap(array, lowerThanPivot, highIndex); // then we can swap the pivot with lower pointer to put the highest number at end of array
         return lowerThanPivot;
     }
 
